@@ -28,6 +28,17 @@ class TaskController extends Controller
             Task->delete();
         */
     }
+
+    public function update($id){
+        $tasks=Task::find($id);
+        return view('edit',compact('tasks'));
+    }
+
+    public function update2(Request $request,$id){
+       /* $update=Task::find($id)->update([
+          //  'name' -> $request -> name;
+        ])*/
+    }
 }
 
 
